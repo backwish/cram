@@ -70,7 +70,7 @@ static int findCodePos(CodeAllocator *self,u64 *code,int size){
     return pos;
 }
 u64 codeAllocate(CodeAllocator *self,int size){
-    int pos,i,l,r,go;
+    int pos;
     u64 code = 0;    
     if(checkCannotAllocate(self,size)) return 1;    
     pos = findCodePos(self,&code,size);    
